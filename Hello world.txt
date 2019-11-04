@@ -1,2 +1,2 @@
-print("Hello world!");
-фывфывфыв
+print("Hello world!;");
+фывфывфыв;
