@@ -24,7 +24,19 @@ public class Array {
 
     public static int convertSumm (String[][] array) throws MyArraySizeException, MyArrayDataException {      //метод конвертации элементов массива из строкового значения в числовое и их суммирование
 
-        if(array.length != 4 || array[0].length != 4 || array[1].length != 4 || array[2].length != 4 || array[3].length != 4) throw new MyArraySizeException("Массив должен иметь размерность 4х4!"); // условие проверяет размерность массива и бросает исключение
+        if(array.length != 4){                                                             // условие проверяет размерность массива 4х4 и бросает исключение
+            throw new MyArraySizeException("Массив должен иметь размерность 4х4!");
+        }else {
+            for(int i=0; i<array.length; i++){
+                if(array[i].length != 4){
+                    throw new MyArraySizeException("Массив должен иметь размерность 4х4!");
+                }
+            }
+        }
+
+        for(int i=0; i<array.length; i++){
+            if(array.length != 4 || array[i].length != 4) throw new MyArraySizeException("Массив должен иметь размерность 4х4!"); // условие проверяет размерность массива и бросает исключение
+        }
 
         int summ = 0;
 
